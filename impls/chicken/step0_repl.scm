@@ -1,0 +1,20 @@
+(import (chicken io))
+
+(define (READ input) 
+  input)
+(define (EVAL input) 
+  input)
+(define (PRINT nput) 
+  input)
+(define (rep input) 
+  (PRINT (EVAL (READ input))))
+
+(define (main)
+  (newline)
+  (display "user> ")
+  (let ((input (read-line)))
+    (unless (equal? input "exit")
+            (display input)
+            (main))))
+
+(main)
